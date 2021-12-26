@@ -6,8 +6,9 @@ export const config: TypeOrmModuleOptions = {
   port: 5432,
   username: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
-  database: process.env.DATABASE_SCHEMA,
-  entities: ['apps/app/**/*.entity{.ts,.js}'],
+  database: 'heromission',
+  // entities: ['apps/app/**/*.entity{.ts,.js}'],
+  entities: ['dist/src/**/*.entity.js'],
   synchronize: true,
   logging: true,
 };
